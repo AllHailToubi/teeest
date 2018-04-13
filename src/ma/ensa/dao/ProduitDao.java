@@ -45,20 +45,13 @@ public class ProduitDao implements ProduitDaoImpl{
 	}
 
 	@Override
-	public int save(Produit prd) {
+	public void save(Produit prd) {
 		Session session=sessionFactory.openSession();
 		Transaction tx=session.beginTransaction();
-		try{
 	    session.save(prd);
 	    tx.commit();
 		session.close();
-		}
-		catch (Exception e){
-			return 0;
-			
-		}
 		
-		return 1;
 	}
 	@Autowired
 	public void setSessionFactory(SessionFactory sessionFactory) {

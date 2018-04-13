@@ -13,7 +13,7 @@
 </head>
 <body>
 
-
+<input type="button" onclick="location.href='ajouterproduit';" value="Ajouter Produits"/>
 <div class="container">
   <h2>Produits</h2>           
   <table class="table table-bordered">

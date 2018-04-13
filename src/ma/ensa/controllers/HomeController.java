@@ -69,16 +69,20 @@ modelview.addObject("llc",lcdao.findOne(idcommande));
 return modelview;
 }
 
-/*@RequestMapping("/ajouterproduit")
+@RequestMapping("/ajouterproduit")
   public String traitform(@ModelAttribute Produit produit)
-{ return "form";}
+{ return "ajouterproduit";}
 
 @RequestMapping(value ="/addProduit" , method=RequestMethod.POST)
 public String addform(@ModelAttribute @Validated Produit produit, BindingResult result,Model model)
  {
-  if
-}
-*/
+	if (result.hasErrors()) {
+        return "error";
+    }
+	dao.save(produit);
+    return "redirect:/produits";
 
+
+ }
 
 }

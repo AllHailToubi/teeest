@@ -7,7 +7,6 @@ import javax.persistence.*;
 @Entity
 public class Produit {
 	@Id
-	@GeneratedValue
 	private Long idproduit;
 	private String description;
 	private double prix;

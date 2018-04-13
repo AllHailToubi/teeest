@@ -18,8 +18,11 @@ public class ProduitValid implements Validator {
 	@Override
 	public void validate(Object objects, Errors errors) {
 		Produit produit = (Produit) objects;
+		if(produit.getIdproduit() == 0){
+			errors.rejectValue("idproduit", "error Idproduit");
+		}
 		if(produit.getDescription().length() >5){
-			errors.rejectValue("description", "error 1");
+			errors.rejectValue("description", "error description");
 		}
 		if(produit.getPrix() == 0){
 			errors.rejectValue("prix", "error prix");

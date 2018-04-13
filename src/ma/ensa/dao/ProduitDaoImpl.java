@@ -10,7 +10,7 @@ import ma.ensa.model.Produit;
 public interface ProduitDaoImpl {
 	
 	public Set<Produit> findAll();
-	public int save(Produit prd);
+	public void save(Produit prd);
 	public Produit findOne(Long id);
 
 }
